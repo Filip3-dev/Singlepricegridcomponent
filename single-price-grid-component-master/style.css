@@ -1,0 +1,112 @@
+body{
+    font-family: 'Karla', sans-serif;
+}
+p{
+    color: white;
+}
+h2, h3{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.grid-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "m m"
+    "c1 c2";
+    margin: 5% 20% 5% 20%;
+    box-shadow: 2px 2px 2px 2px hsl(218, 22%, 67%);
+    border-radius: 10px;
+}
+.main{
+    grid-area: m;
+    background-color:  white;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    padding: 30px;
+}
+.main > h2{
+    color: hsl(179, 62%, 43%);
+}
+.main > p{
+    color: hsl(218, 22%, 67%);
+}
+#aboutsrt{
+    color: hsl(71, 73%, 54%);
+}
+
+
+
+.content-one{
+    grid-area: c1;
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 10px;
+    padding: 30px;
+}
+.pricen{
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+}
+#price{
+    color:  rgb(107,188,188);
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+ 
+#access{
+    padding-bottom: 20px;
+    margin-top: 1%;
+}
+#sign-up{
+    background-color:  hsl(71, 73%, 54%);
+    padding: 15px;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px hsl(218, 22%, 67%);
+    border-radius: 10px;
+}
+
+.content-two{
+    grid-area: c2;
+    background-color: rgb(107,188,188);
+    border-bottom-right-radius: 10px;
+    padding: 30px;
+}
+.content-two > p{
+    color: white;
+    padding-right: 30%;
+}
+.attribution{
+    color:lightseagreen;
+    text-align: center;
+}
+.attribution > a{
+    color:orange;
+}
+@media only screen and (max-width: 800px) {
+    .grid-card{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "m"
+        "c1"
+        "c2"
+        ;
+    }
+    .content-one{
+        border-bottom-left-radius: 0%;
+    }
+    .content-two{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
